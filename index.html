@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Text Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Text Summarizer</h1>
+
+    <label for="inputText">Paste text to summarize</label>
+    <textarea id="inputText" placeholder="Paste long text or article here..."></textarea>
+
+    <div class="controls">
+      <label for="maxLength">Max Summary Length (tokens)</label>
+      <input id="maxLength" type="number" value="150" min="50" max="512"/>
+      <button id="summarizeBtn">Summarize</button>
+    </div>
+
+    <div class="output">
+      <h2>Summary</h2>
+      <div id="summary" class="summary-box">Your summary will appear here.</div>
+      <button id="copyBtn" style="display:none">Copy Summary</button>
+    </div>
+
+    <div class="footer">
+      <small>Backend powered by Hugging Face Inference API. See README for setup.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
