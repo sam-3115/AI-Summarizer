@@ -31,7 +31,9 @@ app.post("/summarize", async (req, res) => {
 
     // Using the Hugging Face Inference API for summarization model
     // Model: facebook/bart-large-cnn (good summarization model)
-    const model = "facebook/bart-large-cnn";
+    // const model = "facebook/bart-large-cnn";
+    const model = "sshleifer/distilbart-cnn-12-6";
+
 
     const hfResponse = await axios.post(
       `https://api-inference.huggingface.co/models/${model}`,
