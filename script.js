@@ -5,8 +5,9 @@
 const BACKEND_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:3000"
-    : "https://my-summarizer.onrender.com";  // <-- replace with your Render backend URL
-
+    : "https://ai-summarizer-sqd3.onrender.com";  // <-- replace with your Render backend URL
+  
+    // : "https://my-summarizer.onrender.com";  // <-- replace with your Render backend URL
 
 const summarizeBtn = document.getElementById("summarizeBtn");
 const inputText = document.getElementById("inputText");
