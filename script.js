@@ -1,6 +1,12 @@
 // Configure the backend URL where you deployed the Express server.
 // Example: "https://my-summarizer-backend.onrender.com" or "http://localhost:3000"
-const BACKEND_URL = "http://localhost:3000"; // <-- Change this to your deployed backend
+// const BACKEND_URL = "http://localhost:3000"; // <-- Change this to your deployed backend
+// Auto-detect backend: use localhost for local dev, Render URL for production
+const BACKEND_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000"
+    : "https://my-summarizer.onrender.com";  // <-- replace with your Render backend URL
+
 
 const summarizeBtn = document.getElementById("summarizeBtn");
 const inputText = document.getElementById("inputText");
